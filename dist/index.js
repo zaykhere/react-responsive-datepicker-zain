@@ -73,6 +73,7 @@ var DatePicker = function DatePicker(_ref) {
       curMonth = 0;
       curYear++;
     } else if (curMonth === -1) {
+      if (--curYear < year) return;
       curMonth = 11;
       curYear--;
     }
