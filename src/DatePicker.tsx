@@ -79,6 +79,8 @@ const DatePicker = ({
   )
   const [month, setMonth] = React.useState<number>(0)
   const [year, setYear] = React.useState<number>(2022)
+  // const [disablePrevYearNav, setDisablePrevYearNav] = React.useState<boolean>(false);
+
   const [selectedDate, setSelectedDate] = React.useState<Date | null>(
     defaultValue || null
   )
@@ -88,11 +90,17 @@ const DatePicker = ({
     let curMonth = month + inc
     let curYear = year
 
+    let actualCurrentYear = new Date().getFullYear();
+
     if (curMonth === 12) {
       curMonth = 0
       curYear++
+
     } else if (curMonth === -1) {
-      if(--curYear < year) return;
+      if(--curYear < actualCurrentYear) {
+        // setDisablePrevYearNav(true);
+        return;
+      } 
       curMonth = 11
       curYear--
     }

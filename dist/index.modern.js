@@ -68,12 +68,16 @@ var DatePicker = function DatePicker(_ref) {
   var changeMonth = function changeMonth(inc) {
     var curMonth = month + inc;
     var curYear = year;
+    var actualCurrentYear = new Date().getFullYear();
 
     if (curMonth === 12) {
       curMonth = 0;
       curYear++;
     } else if (curMonth === -1) {
-      if (--curYear < year) return;
+      if (--curYear < actualCurrentYear) {
+        return;
+      }
+
       curMonth = 11;
       curYear--;
     }
