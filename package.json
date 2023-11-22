@@ -1,10 +1,10 @@
 {
-  "name": "react-responsive-datepicker",
+  "name": "react-responsive-datepicker-zain",
   "version": "1.0.6",
   "description": "A datepicker made for react projects. Easy to use, easy to custom, mobile friendly.",
-  "author": "agunbuhori",
+  "author": "zaykhere",
   "license": "MIT",
-  "repository": "agunbuhori/react-responsive-datepicker",
+  "repository": "zaykhere/react-responsive-datepicker-zain",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
