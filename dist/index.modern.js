@@ -144,6 +144,10 @@ var DatePicker = function DatePicker(_ref) {
     setCalendar(temp);
   }, [month, year]);
   useEffect(function () {
+    var year = new Date().getFullYear();
+    setYear(year);
+  }, []);
+  useEffect(function () {
     document.addEventListener('click', function (event) {
       var _dbRef$current3, _lbRef$current3;
 
