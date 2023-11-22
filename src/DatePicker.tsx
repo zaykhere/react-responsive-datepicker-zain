@@ -168,6 +168,12 @@ const DatePicker = ({
   }, [month, year])
 
   React.useEffect(() => {
+    let year: number = new Date().getFullYear();
+    
+    setYear(year);
+  }, [])
+
+  React.useEffect(() => {
     document.addEventListener('click', (event: MouseEvent) => {
       console.log('clicked', event.target)
       if (
